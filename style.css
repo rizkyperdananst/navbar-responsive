@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --blue: rgb(4, 4, 41);
+    --blue-dark: rgb(4, 4, 10);
+    --white: whitesmoke; 
+}
+
+body {
+    background-color: var(--blue-dark);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--blue);
+}
+
+nav a {
+    text-decoration: none;
+    /* margin-left: 8px; */
+    color: var(--white);
+    padding: 15px;
+}
+
+nav .nav-list a{
+    padding: 15px;
+    display: inline-block;
+}
+
+nav .nav-list a:hover {
+    background-color: var(--white);
+    color: var(--blue-dark);
+}
+
+/* Media responsive */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav .nav-list a{
+        display: block;
+        text-align: center;
+    }
+}
